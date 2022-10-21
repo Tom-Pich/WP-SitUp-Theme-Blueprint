@@ -1,4 +1,7 @@
 $color1: deepskyblue;
+$color2: darkblue;
+
+$title-font: Comic Sans MS ;
 
 $br-point-1: 1150px;
 $br-point-2: 500px;
@@ -11,9 +14,14 @@ p, div, header, main, footer {box-sizing: border-box;}
 main {min-height: calc(100vh - 300px); padding: 0 50px;
     @include media($br-point-2) {padding: 0 10px;}
 }
-footer{background-color: Silver; min-height: 100px;}
+footer{
+    background-color: Silver; min-height: 100px; display: flex; justify-content: space-between; gap: 20px; padding: 20px 50px;
+    @include media($br-point-2) {display: block; padding: 20px 10px;}
+    > div {flex: 1;}
+    h4 {margin: 0 0 10px 0;}
+}
 
-h1 {text-align: center;}
+h1 {text-align: center; font-family: $title-font;}
 p{text-align: justify;}
 
 button {cursor: pointer; background: none; border:none; display: block;}

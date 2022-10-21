@@ -13,6 +13,8 @@
 
 <header>
 
+	<div id="pre-header"></div>
+
 	<div class="header__titles-wrapper">
 		<a href="/">
 			<img src="<?= get_template_directory_uri() ?>/img/logo.svg" alt="Logo de l’entreprise" id="header-main-logo">

@@ -1,16 +1,21 @@
 header {
 
-    padding: 50px 50px 10px 50px; background-color: $color1; position: relative;
+    background-color: $color1; position: relative;
 
-    @include media($br-point-2) {padding: 20px;}
+    // bandeau haut du header
+    #pre-header{
+        height: 30px; background: $color2; color: white; padding-top: 10px;
+    }
 
     // englobe logo + titre + slogan
     .header__titles-wrapper{
         
-        display: flex; align-items: center;
+        padding: 40px 50px 10px 50px; display: flex; align-items: center;
+
+        @include media($br-point-2) {padding: 0 20px 10px 20px;}
 
         #header-main-logo {width: 100px; margin-right: 50px;
-            @include media($br-point-2) {width: 50px; position: absolute; top: 20px; left: 20px; margin: 0;}
+            @include media($br-point-2) {width: 50px; position: absolute; top: 35px; left: 20px; margin: 0;}
         }
         
         h1 {margin: 0; font-size: 200%;
@@ -22,13 +27,16 @@ header {
     // Bouton hamburger menu phone
     #toggle-menu-button{
         
-        position: fixed; z-index: 2; top: 20px; right: 20px; background: none; border:none;
+        position: absolute; z-index: 2; top: 30px; right: 20px; background: none; border:none;
         
         svg {width: 30px;}
 
         path {transition: all .5s; transform-origin: 20% 50%;}
 
         &.active {
+
+            position: fixed;
+
             path:nth-of-type(1) {transform: rotate(45deg);}
             path:nth-of-type(2) {opacity: 0;}
             path:nth-of-type(3) {transform: rotate(-45deg);}
@@ -43,7 +51,7 @@ header {
 }
 
 #header-menu-wide {
-    display: flex; justify-content: center; width: 100%; gap: 20px;
+    display: flex; justify-content: center; width: 100%; gap: 20px; padding-bottom: 15px;;
     a {border: 1px solid black;}
 }
 
