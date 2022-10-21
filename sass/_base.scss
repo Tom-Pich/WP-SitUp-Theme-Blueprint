@@ -8,8 +8,13 @@ $br-point-2: 500px;
 body{margin: 0; font-family: sans-serif;}
 p, div, header, main, footer {box-sizing: border-box;}
 
-main {min-height: calc(100vh - 300px)}
+main {min-height: calc(100vh - 300px); padding: 0 50px;
+    @include media($br-point-2) {padding: 0 10px;}
+}
 footer{background-color: Silver; min-height: 100px;}
+
+h1 {text-align: center;}
+p{text-align: justify;}
 
 button {cursor: pointer; background: none; border:none; display: block;}
 

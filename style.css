@@ -17,11 +17,25 @@ p, div, header, main, footer {
 
 main {
   min-height: calc(100vh - 300px);
+  padding: 0 50px;
+}
+@media screen and (max-width: 500px) {
+  main {
+    padding: 0 10px;
+  }
 }
 
 footer {
   background-color: Silver;
   min-height: 100px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: justify;
 }
 
 button {
