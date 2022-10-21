@@ -1,0 +1,22 @@
+$color1: deepskyblue;
+
+$br-point-1: 1150px;
+$br-point-2: 500px;
+@mixin media($break-point: $br-point-1) {@media screen and (max-width: #{$break-point}) {@content}};
+
+
+body{margin: 0; font-family: sans-serif;}
+p, div, header, main, footer {box-sizing: border-box;}
+
+main {min-height: calc(100vh - 300px)}
+footer{background-color: Silver; min-height: 100px;}
+
+button {cursor: pointer; background: none; border:none; display: block;}
+
+.phone {display: none;
+    @include media($br-point-2) {display: block;}
+}
+
+.desktop {
+    @include media($br-point-2) {display: none !important;}
+}

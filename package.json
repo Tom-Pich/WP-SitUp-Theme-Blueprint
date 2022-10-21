@@ -1,0 +1,11 @@
+{
+  "name": "situp",
+  "version": "1.0.0",
+  "description": "WordPress Blueprint",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./style.css"
+  },
+  "author": "SitUp",
+  "license": "ISC"
+}

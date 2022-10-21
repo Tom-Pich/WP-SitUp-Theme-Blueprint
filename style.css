@@ -1,0 +1,152 @@
+/*
+Theme Name: Tailor-made Theme
+Author: SitUp
+Author URI: https://www.situp-webcreation.com
+Description: Base Theme
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+p, div, header, main, footer {
+  box-sizing: border-box;
+}
+
+main {
+  min-height: calc(100vh - 300px);
+}
+
+footer {
+  background-color: Silver;
+  min-height: 100px;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: block;
+}
+
+.phone {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .phone {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .desktop {
+    display: none !important;
+  }
+}
+
+header {
+  padding: 50px 50px 10px 50px;
+  background-color: deepskyblue;
+  position: relative;
+}
+@media screen and (max-width: 500px) {
+  header {
+    padding: 20px;
+  }
+}
+header .header__titles-wrapper {
+  display: flex;
+  align-items: center;
+}
+header .header__titles-wrapper #header-main-logo {
+  width: 100px;
+  margin-right: 50px;
+}
+@media screen and (max-width: 500px) {
+  header .header__titles-wrapper #header-main-logo {
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+  }
+}
+header .header__titles-wrapper h1 {
+  margin: 0;
+  font-size: 200%;
+}
+@media screen and (max-width: 500px) {
+  header .header__titles-wrapper h1 {
+    margin-top: 60px;
+  }
+}
+header .header__titles-wrapper h2 {
+  margin: 10px 0 0 0;
+  font-size: 150%;
+}
+header #toggle-menu-button {
+  position: fixed;
+  z-index: 2;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+}
+header #toggle-menu-button svg {
+  width: 30px;
+}
+header #toggle-menu-button path {
+  transition: all 0.5s;
+  transform-origin: 20% 50%;
+}
+header #toggle-menu-button.active path:nth-of-type(1) {
+  transform: rotate(45deg);
+}
+header #toggle-menu-button.active path:nth-of-type(2) {
+  opacity: 0;
+}
+header #toggle-menu-button.active path:nth-of-type(3) {
+  transform: rotate(-45deg);
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  list-style: none;
+}
+.menu a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: inherit;
+}
+
+#header-menu-wide {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+#header-menu-wide a {
+  border: 1px solid black;
+}
+
+#header-menu-phone {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background-color: #fff;
+  width: 100%;
+  padding: 50px;
+  transform: translateX(100vw);
+  transition: all 0.5s;
+}
+#header-menu-phone.active {
+  transform: translateX(0);
+}
+
+/*# sourceMappingURL=style.css.map */
