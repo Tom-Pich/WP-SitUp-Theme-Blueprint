@@ -4,6 +4,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 	<link rel="shortcut icon" href="<?= get_template_directory_uri() ?>/img/favicon.png" />
+	<meta name="description" content="<?= get_the_excerpt() ?>" >
 	<?php wp_head(); ?>
 </head>
 
@@ -20,8 +21,8 @@
 			<img src="<?= get_template_directory_uri() ?>/img/logo.svg" alt="Logo de l’entreprise" id="header-main-logo">
 		</a>
 		<div>
-			<h1>Titre du site</h1>
-			<h2>Slogan</h2>
+			<h1><?= get_bloginfo("name") ?></h1>
+			<h2><?= get_bloginfo("description") ?></h2>
 		</div>
 	</div>
 

@@ -18,7 +18,7 @@ header {
             @include media($br-point-2) {width: 50px; position: absolute; top: 35px; left: 20px; margin: 0;}
         }
         
-        h1 {margin: 0; font-size: 200%;
+        h1 {margin: 0; font-size: 200%; text-align: left;
             @include media($br-point-2) {margin-top: 60px;}
         }
         h2 {margin: 10px 0 0 0; font-size: 150%;}
